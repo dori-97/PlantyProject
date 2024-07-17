@@ -22,3 +22,18 @@ endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 // END ENQUEUE PARENT ACTION
+function my_theme_setup() {
+    add_theme_support('custom-logo');
+}
+add_action('after_setup_theme', 'my_theme_setup');
+
+function my_theme_register_menus() {
+    register_nav_menus(
+        array(
+            'primary-menu' => __( 'Primary Menu' ),
+            'footer-menu' => __( 'Footer Menu' )
+        )
+    );
+}
+add_action( 'init', 'my_theme_register_menus' );
+
