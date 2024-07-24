@@ -36,7 +36,10 @@ ul {
     padding:0;
     display:flex;
     justify-content: space-between;
-    padding:0 0 0 30px;
+}
+
+.custom-logo {
+    padding-left:30px;
 }
 
 .primary-menu-class {
@@ -58,7 +61,7 @@ ul {
     padding: 27px 70px;
     background-color: var(--primary-color); 
     color: white; 
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .menu-bouton a:hover {
@@ -125,6 +128,59 @@ ul {
     background-color: white;
 }
 
+.alignfull has-ast-global-color-3-background-color has-background {
+    position:relative;
+}
+
+.image1 {
+    position: absolute;
+    top: 0;
+    left: 215px;
+    z-index: 1;
+}
+
+.image2 {
+    position: absolute;
+    top: 0; 
+    left: 115px; 
+    z-index: 2;
+}
+
+.image3 {
+    position: absolute;
+    top: 50px; 
+    left: -380px; 
+    z-index: 3;
+}
+
+.entry-content .alignfull has-ast-global-color-5-background-color has-background {
+    padding-bottom:0;
+}
+
+
+
+
+.canettes {
+    background-color: white;
+}
+
+/*------NOUS RENCONTRER-----*/
+
+
+.staffcontainer {
+    background-color: white;
+}
+
+.staffimg {
+    display:flex;
+    justify-content: space-between;
+}
+
+.form1 {
+    width:30%;
+}
+
+
 
 
 /*--------FOOTER----------*/
@@ -135,16 +191,59 @@ ul {
     padding:20px 0;
 }
 
+/*-------COMMANDER---------*/
+
+.commandcontainer h5 {
+    padding-left:100px;
+    padding-top:20px;
+}
+
+.commandsection h2 {
+    padding-top:70px;
+}
+
+.ff-t-column-1 .ff-t-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.ff-t-column-2 .ff-t-container{
+    display:flex;
+    flex-direction: column;
+}
+
+.vosinfosform label {
+    color:white;
+    font-size:20px;
+}
+
+.vosinfosform input {
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+
+.formcontainer h5 {
+    padding-left:0px;
+}
+
+.wp-block-uagb-container .uagb-block-9142937c {
+    padding:0px;
+}
+
+.wp-block-uagb-container .uagb-block-09f0be63 {
+    padding:0px;
+}
+
+.ff-el-input--content .ff-el-form-control {
+    padding:0;
+}
+
 
 
 /* -----RESPONSIVE------ */
 @media screen and (max-width: 768px) {
 
     /*-----HEADER RESPONSIVE-----*/
-
-    .menu-header-container {
-        padding:0;
-    }
 
     .primary-menu-class {
         display: none;
