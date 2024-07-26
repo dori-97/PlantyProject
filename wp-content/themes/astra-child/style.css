@@ -19,6 +19,7 @@ Updated: 2024-07-08 16:10:58
     --third-color:#3b8e47;
     --fourth-color:#ede2da;
     --fifth-color:#d1786d;
+    --sixt-color:#E0B9B4;
 }
 
 ul {
@@ -74,6 +75,13 @@ ul {
     text-shadow:0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+.site-logo-desktop {
+    display: block; /* Cache le logo desktop */
+}
+
+.site-logo-mobile {
+    display: none; /* Affiche le logo mobile */
+}
 .menu-icon {
     display: none;
     flex-direction: column;
@@ -87,6 +95,26 @@ ul {
     height: 3px;
     background-color:white;
     margin: 4px 0;
+}
+
+.custom-login-menu-item {
+    font-size:16px;
+}
+
+.custom-login-menu-item:hover {
+    font-weight: bold;
+    color:black;
+    text-shadow:0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.custom-admin-menu-item {
+    font-size:16px;
+}
+
+.custom-admin-menu-item:hover {
+    font-weight: bold;
+    color:black;
+    text-shadow:0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -103,6 +131,7 @@ ul {
 
 #home {
     padding:50px;
+    padding-top:100px;
 }
 
 #about h3 {
@@ -134,22 +163,23 @@ ul {
 
 .image1 {
     position: absolute;
-    top: 0;
-    left: 215px;
+    top: 72px;
+    left: 352px;
     z-index: 1;
 }
 
 .image2 {
     position: absolute;
-    top: 0; 
-    left: 115px; 
+    top: 72px; 
+    left: 187px; 
     z-index: 2;
+    
 }
 
 .image3 {
     position: absolute;
     top: 50px; 
-    left: -380px; 
+    left: -355px; 
     z-index: 3;
 }
 
@@ -157,24 +187,53 @@ ul {
     padding-bottom:0;
 }
 
-
-
-
 .canettes {
     background-color: white;
 }
 
+/* Gestion des shapes dividers */
+
+.uagb-container__shape svg {
+    width: 1440px;
+    height: 100px; 
+    top: 20px;
+}
+
+.uagb-container__shape {
+     overflow:visible;
+}
+
+
+
 /*------NOUS RENCONTRER-----*/
 
+.containertitle h2 {
+    padding-top:70px;
+}
 
 .staffcontainer {
+    padding-bottom:0;
     background-color: white;
 }
 
-.staffimg {
-    display:flex;
-    justify-content: space-between;
+.staffcontainer .ast-container {
+    padding:0;
+    margin:0;
 }
+
+.wp-block-uagb-container .uagb-block-e38ac475 {
+    gap:0px;
+}
+
+
+.imgcontainer {
+    gap:0px;
+}
+
+.namescontainer {
+    gap:0px;
+}
+
 
 .form1 {
     width:30%;
@@ -182,20 +241,11 @@ ul {
 
 
 
-
-/*--------FOOTER----------*/
-.footer-menu-class {
-    display:flex;
-    justify-content: center;
-    list-style-type:none;
-    padding:20px 0;
-}
-
 /*-------COMMANDER---------*/
 
 .commandcontainer h5 {
-    padding-left:100px;
     padding-top:20px;
+    padding-left:10px;
 }
 
 .commandsection h2 {
@@ -238,6 +288,20 @@ ul {
     padding:0;
 }
 
+.ff-default .ff-btn-lg .commandbuttoncontainer .commandbutton {
+    padding:10px 0px;
+}
+
+
+
+/*--------FOOTER----------*/
+.footer-menu-class {
+    display:flex;
+    justify-content: center;
+    list-style-type:none;
+    padding:20px 0;
+}
+
 
 
 /* -----RESPONSIVE------ */
@@ -245,26 +309,40 @@ ul {
 
     /*-----HEADER RESPONSIVE-----*/
 
-    .primary-menu-class {
-        display: none;
+    .custom-logo {
+        display:flex;
+        justify-content: center;
+        padding:15px 0px;
+    }
+
+    .menu-header-container {
+        display: flex;
         flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
+    }
+
+    #menu-header.primary-menu-class {
+        width:100%;
+    }
+
+    .primary-menu-class {
+        font-size:10px;
+        text-align: center;
+        padding-left:0px;
+        gap:0;
     }
 
     .primary-menu-class li {
-        text-align: center;
-        margin: 10px 0;
+        width:calc(50% - 0px)  
     }
 
-    .menu-icon {
-        display: flex;
-        background-color: var(--primary-color);
+    .menu-link {
+        width:100%;
     }
 
+    .menu-bouton a {
+        padding:10px 10px;
+        height:45px;
+    }   
 
 }
 
