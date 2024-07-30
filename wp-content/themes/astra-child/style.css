@@ -75,28 +75,6 @@ ul {
     text-shadow:0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.site-logo-desktop {
-    display: block; /* Cache le logo desktop */
-}
-
-.site-logo-mobile {
-    display: none; /* Affiche le logo mobile */
-}
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    justify-content: end;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.menu-icon .bar {
-    width: 25px;
-    height: 3px;
-    background-color:white;
-    margin: 4px 0;
-}
-
 .custom-login-menu-item {
     font-size:16px;
 }
@@ -157,7 +135,7 @@ ul {
     background-color: white;
 }
 
-.alignfull has-ast-global-color-3-background-color has-background {
+.alignfull .has-ast-global-color-3-background-color .has-background {
     position:relative;
 }
 
@@ -183,7 +161,7 @@ ul {
     z-index: 3;
 }
 
-.entry-content .alignfull has-ast-global-color-5-background-color has-background {
+.entry-content .alignfull .has-ast-global-color-5-background-color .has-background {
     padding-bottom:0;
 }
 
@@ -243,13 +221,27 @@ ul {
 
 /*-------COMMANDER---------*/
 
+
 .commandcontainer h5 {
     padding-top:20px;
     padding-left:10px;
 }
 
-.commandsection h2 {
-    padding-top:70px;
+.wp-block-uagb-container.commandcontainer.uagb-block-48a2f72b {
+    border-top:1px solid white;
+    padding:0px;
+}
+
+.frm-fluent-form {
+    width:860px;
+}
+
+.wp-block-uagb-container.uagb-block-fb61e62b {
+    padding:0;
+}
+
+.wp-block-uagb-container.formcontainer.uagb-block-f67b1945.alignfull.uagb-is-root-container {
+    padding-left:0px;
 }
 
 .ff-t-column-1 .ff-t-container {
@@ -262,9 +254,88 @@ ul {
     flex-direction: column;
 }
 
+.ff-t-column-1 h5, 
+.ff-t-column-2 h5 {
+    font-size: 30px;
+}
+
+.vosinfosform .ff-t-column-1 {
+    flex: 1;
+    position: relative; /* Position relative pour les pseudo-éléments */
+    padding-right:40px;
+}
+
+.vosinfosform .ff-t-column-1::after {
+    /*border-right:1px solid white;
+    padding-right:40px;*/
+
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 6%; /* Ajustez cette valeur pour modifier la position verticale de la bordure */
+    height: 89%; /* La hauteur de la bordure (ajustez selon vos besoins) */
+    width: 1px; /* Largeur de la bordure */
+    background-color: white; /* Couleur de la bordure */
+}
+
+
+
+.column::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%; /* Ajustez cette valeur pour modifier la position verticale de la bordure */
+    height: 50%; /* La hauteur de la bordure (ajustez selon vos besoins) */
+    width: 1px; /* Largeur de la bordure */
+    background-color: black; /* Couleur de la bordure */
+}
+
+.vosinfosform .ff-t-column-2{
+    padding-left:25px;
+}
+
+.ff-el-group.ff-custom_html .vosinfosetlivraison {
+    margin:0;
+}
+
 .vosinfosform label {
     color:white;
     font-size:20px;
+}
+
+/*Gestion du formulaire 1ère partie*/
+.ff-t-container.ff-column-container.ff_columns_total_4.quantite div  {
+    display: flex;
+    justify-content: center;
+}
+
+.ff-t-container.ff-column-container.ff_columns_total_4.quantite{
+    border-bottom:1px solid white;
+    box-sizing:border-box;
+}
+
+#ff_4_numeric_field_6.ff-el-form-control {
+    width:70px;
+    height:56px;
+}
+
+#ff_4_numeric_field_5.ff-el-form-control {
+    width:70px;
+    height:56px;
+}
+
+#ff_4_numeric_field_4.ff-el-form-control {
+    width:70px;
+    height:56px;
+}
+
+#ff_4_numeric_field_3.ff-el-form-control {
+    width:70px;
+    height:56px;
+}
+#ff_4_numeric_field.ff-el-form-control {
+    width:70px;
+    height:56px;
 }
 
 .vosinfosform input {
@@ -272,9 +343,6 @@ ul {
     padding-bottom:20px;
 }
 
-.formcontainer h5 {
-    padding-left:0px;
-}
 
 .wp-block-uagb-container .uagb-block-9142937c {
     padding:0px;
@@ -292,6 +360,49 @@ ul {
     padding:10px 0px;
 }
 
+.fraise {
+    background-image: url(http://localhost:10008/wp-content/uploads/2024/07/jeremy-bezanger-0QgbyZdhX7k-unsplash-1.png);
+    background-size: 193px 129px;
+    height:129px;
+    width:193px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pamplemousse {
+    background-image: url(http://localhost:10008/wp-content/uploads/2024/07/estudio-bloom-tOitjphtIXU-unsplash-1.png);
+    background-size: 193px 129px;
+    height:129px;
+    width:193px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.framboise {
+    background-image: url(http://localhost:10008/wp-content/uploads/2024/07/rodion-kutsaev-4k8xEFW4_3Q-unsplash-1.png);
+    background-size: 193px 129px;
+    height:129px;
+    width:193px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.citron {
+    background-image: url(http://localhost:10008/wp-content/uploads/2024/07/estudio-bloom-ezqnxsqUZ80-unsplash-1.png);
+    background-size: 193px 129px;
+    height:129px;
+    width:193px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+}
 
 
 /*--------FOOTER----------*/
@@ -307,7 +418,7 @@ ul {
 /* -----RESPONSIVE------ */
 @media screen and (max-width: 768px) {
 
-    /*-----HEADER RESPONSIVE-----*/
+    /*-----HEADER RESPONSIVE MOBILE-----*/
 
     .custom-logo {
         display:flex;
@@ -343,6 +454,102 @@ ul {
         padding:10px 10px;
         height:45px;
     }   
+
+    /*-----ACCUEIL MOBILE-----*/
+
+    .image1 {
+        position: absolute;
+        top: 72px;
+        left: 2px;
+        z-index: 1;
+    }
+    
+    .image2 {
+        position: absolute;
+        top: 72px; 
+        left: 153px; 
+        z-index: 2;
+        
+    }
+    
+    .image3 {
+        position: absolute;
+        top: 50px; 
+        left: -290px; 
+        z-index: 3;
+    }
+
+    .wp-block-uagb-container.uagb-block-68d3763d {
+        padding:0;
+    }
+
+    /*------NOUS RENCONTRER MOBILE-----*/
+
+   .staffcontainer1 {
+        display:flex;
+        flex-direction:column;
+   }
+
+   .form1 {
+    justify-content: center;
+    width:100%;
+   }
+
+   .nousrencontrer .has-text-align-center p{
+    padding-left:0;
+   }
+
+   .ast-container {
+    padding:0;
+   }
+
+   .wp-block-uagb-container.uagb-block-29ca1c13 {
+    padding-top:30px;
+   }
+
+   .wp-block-uagb-container.uagb-block-d065d675{
+    padding:0;
+   }
+
+
+}
+
+@media screen and (max-width: 1024px){
+
+    /*-------ACCUEIL TABLETTES-----*/
+
+    .image1 {
+        position: absolute;
+        top: 72px;
+        left: 218px;
+        z-index: 1;
+    }
+    
+    .image2 {
+        position: absolute;
+        top: 72px; 
+        left: 153px; 
+        z-index: 2;
+        
+    }
+    
+    .image3 {
+        position: absolute;
+        top: 50px; 
+        left: -290px; 
+        z-index: 3;
+    }
+
+    .avisclients {
+        display:flex;
+        flex-direction: column;
+    }
+
+    /*------NOUS RENCONTRER TABLETTE------*/
+
+    .wp-block-uagb-container.uagb-block-d065d675 {
+        padding:0;
+    }
 
 }
 

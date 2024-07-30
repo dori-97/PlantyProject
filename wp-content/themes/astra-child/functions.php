@@ -41,18 +41,18 @@ add_action( 'init', 'my_theme_register_menus' );
 
 
 function custom_menu_item_for_logged_in_users($items, $args) {
-    // Vérifiez si l'emplacement du menu est le header-menu
+    
     if ($args->theme_location == 'primary-menu') {
-        // Vérifiez si l'utilisateur est connecté
-        if (is_user_logged_in()) {
-            // Créez un nouvel élément de menu pour les utilisateurs connectés
+        
+        if (is_user_logged_in()&& current_user_can ('administrator')) {
+            
             $new_item = '<li class="menu-item custom-admin-menu-item"><a href="' . esc_url(home_url('/admin')) . '">Admin</a></li>';      
    
-        // Insérez le nouvel élément à une position spécifique
-        $menu_items = explode('</li>', $items); // Diviser les éléments de menu existants
-        array_splice($menu_items, 1, 0, $new_item); // Insérer à la deuxième position (index 1)
+        
+        $menu_items = explode('</li>', $items); 
+        array_splice($menu_items, 1, 0, $new_item); 
 
-        // Recréer la chaîne des éléments de menu
+        
         $items = implode('</li>', $menu_items) . '</li>';
     }
     }
