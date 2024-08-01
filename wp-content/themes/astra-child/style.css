@@ -107,6 +107,7 @@ ul {
     background-color:var(--fourth-color);
 }
 
+
 #home {
     padding:50px;
     padding-top:100px;
@@ -120,10 +121,6 @@ ul {
     height:80px;
     display: inline-block;
     padding:40px;
-}
-
-#whyus {
-    padding:0;
 }
 
 #whyus h2 {
@@ -169,6 +166,10 @@ ul {
     background-color: white;
 }
 
+.wp-block-cover__background.has-background-dim-0.has-background-dim  {
+    width:393px;
+}
+
 /* Gestion des shapes dividers */
 
 .uagb-container__shape svg {
@@ -199,10 +200,24 @@ ul {
     margin:0;
 }
 
+/*Gestion positionnement des éléments dans section "l'Équipe"*/
+.wp-block-uagb-container.uagb-block-fa8d658b,
+.wp-block-uagb-container.uagb-block-46440411,
+.wp-block-uagb-container.uagb-block-640fe36b {
+    gap:0;
+}
+
+.wp-block-uagb-container.names.uag-hide-mob.uagb-block-ed923e27.alignfull.uagb-is-root-container {
+    padding:0;
+}
+
+.wp-block-uagb-container.staffcontainer.uagb-block-22d81277.alignfull.uagb-is-root-container {
+    padding-top:124px;
+}
+
 .wp-block-uagb-container .uagb-block-e38ac475 {
     gap:0px;
 }
-
 
 .imgcontainer {
     gap:0px;
@@ -212,24 +227,42 @@ ul {
     gap:0px;
 }
 
+#fluentform_3 {
+    width:39%;
+}
 
-.form1 {
-    width:30%;
+.fluentform.ff-default.fluentform_wrapper_3.form1.ff_guten_block.ffs_default_wrap {
+    display:flex;
+    justify-content: center;
+    width:100%;
+}
+
+.wp-block-uagb-container.uagb-block-ffdec2ed.alignfull.uagb-is-root-container {
+    padding:0;
 }
 
 
 
 /*-------COMMANDER---------*/
 
+.titrecommander {
+    padding-top:70px;
+}
 
-.commandcontainer h5 {
-    padding-top:20px;
-    padding-left:10px;
+.titrepage {
+    padding-top:50px;
+    padding-bottom:30px;
+    padding-left:0px;
 }
 
 .wp-block-uagb-container.commandcontainer.uagb-block-48a2f72b {
     border-top:1px solid white;
     padding:0px;
+    gap:0;
+}
+
+.wp-block-uagb-container.formcontainer.uagb-block-f67b1945.alignfull.uagb-is-root-container {
+    padding-top:0;
 }
 
 .frm-fluent-form {
@@ -266,28 +299,13 @@ ul {
 }
 
 .vosinfosform .ff-t-column-1::after {
-    /*border-right:1px solid white;
-    padding-right:40px;*/
-
     content: "";
     position: absolute;
     right: 0;
-    top: 6%; /* Ajustez cette valeur pour modifier la position verticale de la bordure */
-    height: 89%; /* La hauteur de la bordure (ajustez selon vos besoins) */
+    top: 13%; /* Ajustez cette valeur pour modifier la position verticale de la bordure */
+    height: 83%; /* La hauteur de la bordure (ajustez selon vos besoins) */
     width: 1px; /* Largeur de la bordure */
     background-color: white; /* Couleur de la bordure */
-}
-
-
-
-.column::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%; /* Ajustez cette valeur pour modifier la position verticale de la bordure */
-    height: 50%; /* La hauteur de la bordure (ajustez selon vos besoins) */
-    width: 1px; /* Largeur de la bordure */
-    background-color: black; /* Couleur de la bordure */
 }
 
 .vosinfosform .ff-t-column-2{
@@ -296,11 +314,16 @@ ul {
 
 .ff-el-group.ff-custom_html .vosinfosetlivraison {
     margin:0;
+    padding-top:65px;
 }
 
 .vosinfosform label {
     color:white;
     font-size:20px;
+}
+
+.frm-fluent-form .ff-t-container{
+    gap:0px;
 }
 
 /*Gestion du formulaire 1ère partie*/
@@ -312,37 +335,33 @@ ul {
 .ff-t-container.ff-column-container.ff_columns_total_4.quantite{
     border-bottom:1px solid white;
     box-sizing:border-box;
+    gap:30px;
+    padding-bottom:40px;
 }
 
-#ff_4_numeric_field_6.ff-el-form-control {
-    width:70px;
-    height:56px;
-}
-
-#ff_4_numeric_field_5.ff-el-form-control {
-    width:70px;
-    height:56px;
-}
-
-#ff_4_numeric_field_4.ff-el-form-control {
-    width:70px;
-    height:56px;
-}
-
-#ff_4_numeric_field_3.ff-el-form-control {
-    width:70px;
-    height:56px;
-}
+/* Modification taille inputs première partie formulaire et apparence */
+#ff_4_numeric_field_6.ff-el-form-control,
+#ff_4_numeric_field_5.ff-el-form-control,
+#ff_4_numeric_field_4.ff-el-form-control,
+#ff_4_numeric_field_3.ff-el-form-control,
 #ff_4_numeric_field.ff-el-form-control {
-    width:70px;
+    width:39px;
     height:56px;
+    border-radius:0px;
+    padding:4px;
+    text-align:center;
 }
 
-.vosinfosform input {
-    padding-top: 20px;
-    padding-bottom:20px;
+/* Modification taille inputs deuxième partie formulaire*/
+#ff_4_names_last_name_.ff-el-form-control,
+#ff_4_names_first_name_.ff-el-form-control,
+#ff_4_email.ff-el-form-control,
+#ff_4_address_2_address_line_1_.ff-el-form-control,
+#ff_4_address_2_city_.ff-el-form-control,
+#ff_4_address_2_zip_.ff-el-form-control {
+    width:383px;
+    height:71px;
 }
-
 
 .wp-block-uagb-container .uagb-block-9142937c {
     padding:0px;
@@ -356,8 +375,13 @@ ul {
     padding:0;
 }
 
-.ff-default .ff-btn-lg .commandbuttoncontainer .commandbutton {
-    padding:10px 0px;
+.commandbuttonsection {
+    padding-top:25px;
+}
+
+.ff-btn.ff-btn-submit.ff-btn-md.commandbutton.ff_btn_style.wpf_has_custom_css {
+    height:55px;
+    font-size: 15px;
 }
 
 .fraise {
@@ -404,7 +428,6 @@ ul {
     text-align: center;
 }
 
-
 /*--------FOOTER----------*/
 .footer-menu-class {
     display:flex;
@@ -415,7 +438,7 @@ ul {
 
 
 
-/* -----RESPONSIVE------ */
+/* ---------------------------------------RESPONSIVE----------------------------------------- */
 @media screen and (max-width: 768px) {
 
     /*-----HEADER RESPONSIVE MOBILE-----*/
@@ -456,6 +479,14 @@ ul {
     }   
 
     /*-----ACCUEIL MOBILE-----*/
+    .wp-block-uagb-container.accueilmobile.uag-hide-desktop.uag-hide-tab.uagb-block-1e79086c.default.uagb-is-root-container {
+        position:relative;
+    }
+
+    #home {
+        padding-top:30px;
+        width:100%;
+    }
 
     .image1 {
         position: absolute;
@@ -483,7 +514,13 @@ ul {
         padding:0;
     }
 
+
+
     /*------NOUS RENCONTRER MOBILE-----*/
+
+    .wp-block-uagb-container.staffcontainer.uagb-block-22d81277.alignfull.uagb-is-root-container {
+        padding-top:75px;
+    }
 
    .staffcontainer1 {
         display:flex;
@@ -511,8 +548,64 @@ ul {
     padding:0;
    }
 
+   #fluentform_3 {
+    width:80%;
+    }
 
+    /*----COMMANDER MOBILE----*/
+    #fluentform_4 {
+        width:100%;
+    }
+
+    .titrecommander {
+        padding-top:30px;
+    }
+    
+    .titrepage {
+       text-align:center;
+    }
+
+    .ff-t-container.ff-column-container.ff_columns_total_4.quantite div {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+    }
+
+    .vosinfosform .ff-t-column-1 {
+        padding-right:0px;
+    }
+
+    .vosinfosform .ff-t-column-2 {
+        padding-left:0px;
+    }
+
+    .ff-t-container.ff-column-container.ff_columns_total_2.vosinfosform div{
+        padding:0 5px;
+    }
+
+    .ff-el-group.emailcontainer {
+        width:305px;
+        margin-left:15px;
+    }
+
+    .vosinfosform .ff-t-column-1::after {
+        display:none;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 6%; /* Ajustez cette valeur pour modifier la position verticale de la bordure */
+        height: 89%; /* La hauteur de la bordure (ajustez selon vos besoins) */
+        width: 1px; /* Largeur de la bordure */
+        background-color: white; /* Couleur de la bordure */
+    }
+
+    
 }
+
+
+
+
 
 @media screen and (max-width: 1024px){
 
@@ -540,16 +633,35 @@ ul {
         z-index: 3;
     }
 
+
     .avisclients {
         display:flex;
         flex-direction: column;
     }
+
 
     /*------NOUS RENCONTRER TABLETTE------*/
 
     .wp-block-uagb-container.uagb-block-d065d675 {
         padding:0;
     }
+
+
+    /*-------COMMANDER TABLETTE--------*/
+    
+    .commandsection {
+        background-color: red;
+        width:100%;
+    }
+
+    #content .site-content {
+        background-color: #3b8e47;
+    }
+
+    .ast-container {
+        padding:0;
+    }
+
 
 }
 
