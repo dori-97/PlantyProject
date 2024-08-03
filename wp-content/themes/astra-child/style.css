@@ -31,6 +31,8 @@ ul {
 }
 
 
+
+
 /*------HEADER-------*/
 
 .menu-header-container {
@@ -107,7 +109,6 @@ ul {
     background-color:var(--fourth-color);
 }
 
-
 #home {
     padding:50px;
     padding-top:100px;
@@ -132,8 +133,11 @@ ul {
     background-color: white;
 }
 
-.alignfull .has-ast-global-color-3-background-color .has-background {
+
+/*Gestion image accueil avec z-index pour superposition*/
+.wp-block-uagb-container.uagb-block-e16dbdfd.alignfull.uagb-is-root-container {
     position:relative;
+    
 }
 
 .image1 {
@@ -182,6 +186,10 @@ ul {
      overflow:visible;
 }
 
+.uagb-container__shape.uagb-container__shape-bottom.uagb-container__invert {
+    height:100px;
+    bottom:-20px;
+}
 
 
 /*------NOUS RENCONTRER-----*/
@@ -241,9 +249,21 @@ ul {
     padding:0;
 }
 
+.nousrencontrermobile {
+    background-color: var(--fourth-color);
+}
+
+.wp-block-uagb-container.nousrencontrercurve.uagb-block-6c5c60e3.alignfull.uagb-is-root-container {
+    padding:0;
+}
+
 
 
 /*-------COMMANDER---------*/
+
+#page .site-content {
+    flex-grow:0;
+}
 
 .titrecommander {
     padding-top:70px;
@@ -277,14 +297,27 @@ ul {
     padding-left:0px;
 }
 
-.ff-t-column-1 .ff-t-container {
+.ff-t-column-1 .ff-t-container{
     display: flex;
     flex-direction: column-reverse;
+    gap:0px;
 }
 
 .ff-t-column-2 .ff-t-container{
     display:flex;
     flex-direction: column;
+}
+
+/*Retrait gap entre les paires de champs*/
+#fluentform_4 .adress .ff-t-container  {
+    display:flex;
+    gap: 0;
+}
+
+#fluentform_4 .names .ff-t-container  {
+    display:flex;
+    gap: 0;
+
 }
 
 .ff-t-column-1 h5, 
@@ -294,7 +327,7 @@ ul {
 
 .vosinfosform .ff-t-column-1 {
     flex: 1;
-    position: relative; /* Position relative pour les pseudo-éléments */
+    position: relative; 
     padding-right:40px;
 }
 
@@ -322,11 +355,8 @@ ul {
     font-size:20px;
 }
 
-.frm-fluent-form .ff-t-container{
-    gap:0px;
-}
 
-/*Gestion du formulaire 1ère partie*/
+/*Gestion du formulaire 1ère partie et couleur placeholder*/
 .ff-t-container.ff-column-container.ff_columns_total_4.quantite div  {
     display: flex;
     justify-content: center;
@@ -339,13 +369,17 @@ ul {
     padding-bottom:40px;
 }
 
-/* Modification taille inputs première partie formulaire et apparence */
+.ff-t-container.ff-column-container.ff_columns_total_4.quantite ::placeholder {
+    color:black;
+}
+
+/* Modification taille inputs première partie formulaire et apparence*/
 #ff_4_numeric_field_6.ff-el-form-control,
 #ff_4_numeric_field_5.ff-el-form-control,
 #ff_4_numeric_field_4.ff-el-form-control,
 #ff_4_numeric_field_3.ff-el-form-control,
 #ff_4_numeric_field.ff-el-form-control {
-    width:39px;
+    width:46px;
     height:56px;
     border-radius:0px;
     padding:4px;
@@ -428,6 +462,12 @@ ul {
     text-align: center;
 }
 
+
+#fluentform_4_success.ff-message-success{
+    color:white;
+}
+
+
 /*--------FOOTER----------*/
 .footer-menu-class {
     display:flex;
@@ -479,39 +519,43 @@ ul {
     }   
 
     /*-----ACCUEIL MOBILE-----*/
-    .wp-block-uagb-container.accueilmobile.uag-hide-desktop.uag-hide-tab.uagb-block-1e79086c.default.uagb-is-root-container {
-        position:relative;
-    }
+
 
     #home {
         padding-top:30px;
         width:100%;
+        padding-bottom:80px;
     }
 
-    .image1 {
+    .image1mobile {
         position: absolute;
-        top: 72px;
-        left: 2px;
+        top: 220px;
+        left: 107px;
         z-index: 1;
     }
     
-    .image2 {
+    .image2mobile {
         position: absolute;
-        top: 72px; 
-        left: 153px; 
+        top: 220px; 
+        left: 189px; 
         z-index: 2;
         
     }
     
-    .image3 {
+    .image3mobile {
         position: absolute;
-        top: 50px; 
-        left: -290px; 
+        top: 195px; 
+        left: 144px; 
         z-index: 3;
     }
 
     .wp-block-uagb-container.uagb-block-68d3763d {
         padding:0;
+    }
+
+    .wp-block-column.is-vertically-aligned-center.is-layout-flow.wp-container-core-column-is-layout-11.wp-block-column-is-layout-flow p {
+        display:flex;
+        justify-content: end;
     }
 
 
@@ -613,15 +657,15 @@ ul {
 
     .image1 {
         position: absolute;
-        top: 72px;
-        left: 218px;
+        top: 65px;
+        left: 210px;
         z-index: 1;
     }
     
     .image2 {
         position: absolute;
-        top: 72px; 
-        left: 153px; 
+        top: 65px; 
+        left: 143px; 
         z-index: 2;
         
     }
@@ -629,7 +673,7 @@ ul {
     .image3 {
         position: absolute;
         top: 50px; 
-        left: -290px; 
+        left: -294px; 
         z-index: 3;
     }
 
@@ -646,22 +690,15 @@ ul {
         padding:0;
     }
 
+    /*Gestion espacements entre photos section "l'Équipe"*/
+    .wp-block-group.imgcontainer.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-2.wp-block-group-is-layout-flex {
+        gap:50px;
+    }
+
 
     /*-------COMMANDER TABLETTE--------*/
     
-    .commandsection {
-        background-color: red;
-        width:100%;
-    }
-
-    #content .site-content {
-        background-color: #3b8e47;
-    }
-
-    .ast-container {
-        padding:0;
-    }
-
+   
 
 }
 
